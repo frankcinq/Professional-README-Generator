@@ -1,0 +1,52 @@
+<!-- MINI PROJECT:
+- create index.js
+- run npm init
+- run npm install inquirer
+- const fs = require('fs');
+- const inquirer = require('inquirer');
+- Store individual inputs from the user somehow (variable)
+    - Get these from the inquirer's "response" object
+
+    - Just use inquirer's .prompt() method
+- prompt user
+- creat prompts
+    - maybe use array of strings to store prompts
+    - Prompts:
+        - What is your name?
+        - Where are you from?
+        - What is your favorite hobby?
+        - What is your favorite food?
+        - Enter your Github Username:
+        - Enter your Linkedin URL:
+    - What do we pass into the .prompt() method
+        - Uses an array of objects that look like:
+            {
+                **type: ...( probably just "input" for the most part)
+                **message: ...(this is the actual prompt displayed to the user)
+                **name: ... (can be anything I want... is used as property name on the response object
+                to retrieve the value that the user typed)
+            }
+    - Uses Promise .then(callbackFunction...);
+            inquirer.prompt ([{...}, {...}, {...}]).then(response => {...});
+                - Maybe console.log successfully
+                - Create the HTML and incorporate user responses (from response object)
+                    - probably using Template Literal syntax to build the HTML
+                - Write/ouput HTML file to the application root director (same as folder that contains the .js)
+                    - use the fs.writeFile(fileName, htmlString, (err) => {...}) method
+                            -Need to write out Success message after successfully outputting HTML
+                                - inside writeFile callback, verify that there was no error.
+                                -Just use console.log() for this
+- create questions
+- verify user inputs (maybe stretch goal)
+        - may need to use a while loop before moving on to next question
+- Create the HTML and incorporate user responses (from variables)
+        - probably using Template Literal syntax to build the HTML
+- Need to write out Success message AFTER html page created
+- Write/output HTML file to the application root director (same folder that contains the .js)
+- TASK: Someone needs to design what the HTML should look like.
+    - Design as an actual HTML file in VS Code for speed, then can copy into a Template Literal in code and modify
+    to include variable values.
+- Learn to use Inquirer Node package/API
+- Learn to use filesystem (FS) API build in to Node
+    -use the fs.writeFile() method
+-->
